@@ -1,7 +1,8 @@
 <meta>
-	<info author="CrosRoad95" version="1.0" name="Główny zasób" type="gamemode"></info>
+	<info author="CrosRoad95" version="1.0" name="MRF" type="gamemode"></info>
   <download_priority_group>9998</download_priority_group>
 	<script src="c.lua" type="client"></script>
 	<script src="s.lua" type="server"></script>
 	<min_mta_version server="1.5.7" client="1.5.7" />
+  <include resource="db" />
 </meta>

@@ -2,10 +2,15 @@
   <info author="CrosRoad95"/>
   <download_priority_group>9999</download_priority_group>
   <script src="database.lua" type="server" />
+  <script src="tables.lua" type="server" />
   
   <export function="getHandler" type="server" />
   <export function="query" type="server" />
   <export function="queryFree" type="server" />
   <export function="queryAsync" type="server" />
+  <export function="getTablePrefix" type="server" />
+  <settings>
+	  <setting name="tablePrefix" value="mrf_" />
+  </settings>
   <min_mta_version server="1.5.7"></min_mta_version>
 </meta>

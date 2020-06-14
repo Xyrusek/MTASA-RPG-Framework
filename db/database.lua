@@ -1,15 +1,19 @@
 ﻿local mysqlHandler = nil
+local tablePrefix = ""
 local mysqlData = {
-  login = "",
-  host = "",
+  login = "root",
+  host = "localhost",
   password = "",
-	database = ""
+	database = "mrf"
 }
+
+addEvent("onDatabaseConnected", false)
 
 local function mysql_connect( )
   mysqlHandler = dbConnect( "mysql", "dbname="..mysqlData.database..";host="..mysqlData.host, mysqlData.login, mysqlData.password, "share=1" )
   if mysqlHandler then
     outputDebugString( "[db:mysql_connect()] polaczono z baza danych!" )
+    triggerEvent("onDatabaseConnected", root)
     query( "SET NAMES utf8;" )
     setTimer(query,1000*60*2,0,'SET NAMES utf8;') -- mysql gubi się po jakimś czasie
   else
@@ -20,7 +24,12 @@ local function mysql_connect( )
   return true
 end
 
+function getTablePrefix()
+  return tablePrefix
+end
+
 addEventHandler( "onResourceStart", resourceRoot, function( )
+  tablePrefix = get("tablePrefix")
   mysqlHandler = nil
   mysql_connect( )
 end )
