@@ -1,0 +1,9 @@
+<meta>
+    <info author="Xyrusek" version="1.0" name="System czcionek" type="script"/>
+    <script src="c.lua" type="client"/>
+
+    <export function="getFont" type="client"/>
+
+    <file src="files/font/tw.ttf"/>
+    <file src="files/font/twl.ttf"/>
+</meta>
