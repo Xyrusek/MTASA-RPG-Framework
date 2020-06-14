@@ -1,7 +1,3 @@
---[[
-    KOD    
---]]
-
 local fonts = {}
 
 function getFont(path, size)
