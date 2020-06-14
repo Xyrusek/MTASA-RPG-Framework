@@ -6,6 +6,23 @@
 
 	<script src="players/accounts.lua" type="server"></script>
   
+  <export function="getAccountIdByLogin" type="server"></export>
+  <export function="getAccountInfo" type="server"></export>
+  <export function="getLastAccountId" type="server"></export>
+  <export function="accountLoginExists" type="server"></export>
+  <export function="accountIdExists" type="server"></export>
+  <export function="getAccountLoginById" type="server"></export>
+  <export function="registerAccount" type="server"></export>
+  <export function="verifyAccountPassword" type="server"></export>
+  <export function="getAccountData" type="server"></export>
+  <export function="hasElementData" type="server"></export>
+  <export function="setAccountData" type="server"></export>
+  <export function="savePlayer" type="server"></export>
+  <export function="isAccountInUse" type="server"></export>
+  <export function="getPlayerByUID" type="server"></export>
+  <export function="isPlayerLoggedIn" type="server"></export>
+  <export function="getPlayerUID" type="server"></export>
+
 	<min_mta_version server="1.5.7" client="1.5.7" />
   <include resource="db" />
 </meta>
