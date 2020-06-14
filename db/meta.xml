@@ -6,7 +6,9 @@
   
   <export function="getHandler" type="server" />
   <export function="query" type="server" />
+  <export function="queryTable" type="server" />
   <export function="queryFree" type="server" />
+  <export function="queryTableFree" type="server" />
   <export function="queryAsync" type="server" />
   <export function="getTablePrefix" type="server" />
   <settings>

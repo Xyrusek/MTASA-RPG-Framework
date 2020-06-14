@@ -55,6 +55,10 @@ function query( ... )
 	return false
 end
 
+function queryTable(sql, table, ...)
+  return query(string.format(sql, getTablePrefix()..table),...)
+end
+
 function getHandler( )
   if not isElement( mysqlHandler ) then
     mysql_connect( ) -- autoreconnect
@@ -78,6 +82,11 @@ function queryFree( ... )
 	end
 	return false
 end
+
+function queryTableFree(sql, table, ...)
+  return queryFree(string.format(sql, getTablePrefix()..table),...)
+end
+
 
 function queryAsync( trigger, args, ... )
   if not isElement( mysqlHandler ) then
