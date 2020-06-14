@@ -7,11 +7,20 @@ local tables = {
       `serial` varchar(32) COLLATE utf8_polish_ci DEFAULT NULL COMMENT 'serial rejestracji',
       `lastSerial` varchar(32) COLLATE utf8_polish_ci DEFAULT NULL COMMENT 'ostatni serial',
       `ip` varchar(22) COLLATE utf8_polish_ci DEFAULT NULL COMMENT 'ip rejestracji',
-      `lastIp` int(11) DEFAULT NULL COMMENT 'ostatnie ip',
-      `registerTs` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'data rejestracji',
+      `lastIp` varchar(22) DEFAULT NULL COMMENT 'ostatnie ip',
+      `registerTs` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'data rejestracji',
       `lastUsed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'data ostatniego logowania',
       PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
+     ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
+  ]],
+  ["accountsDatas"] = [[
+    CREATE TABLE IF NOT EXISTS `%s` (
+      `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+      `uid` int(11) NOT NULL COMMENT 'id konta',
+      `valuekey` varchar(128) COLLATE utf8_polish_ci NOT NULL COMMENT 'klucz',
+      `value` text COLLATE utf8_polish_ci NOT NULL COMMENT 'wartosc',
+      PRIMARY KEY (`id`)
+     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
   ]]
 }
 
