@@ -1,6 +1,6 @@
 <meta>
     <info author="Xyrusek" version="1.0" name="System czcionek" type="script"/>
-    <script src="c_core.lua" type="client" cache="false" validate="true"/>
+    <script src="c.lua" type="client" cache="false" validate="true"/>
 
     <export function="getFont" type="client"/>
 
